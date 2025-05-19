@@ -1,0 +1,146 @@
+@use '_color' as c;
+
+.normal-text{
+    b{
+        font-weight: 600;
+    }
+}
+
+
+.secondary-screen{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-color: #fff;
+    width: 100%;
+    background-size: cover;
+    background-position: 70% 0px;
+    min-height: 500px;;
+    h1{
+        z-index: 9;
+        position: absolute;
+        top: 30%;
+        left: 10px;
+        // transform: translate(-50%, -50%);
+    }
+    &.blog-article-page{
+        min-height: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+
+.white.secondary-screen{
+    .icons-set a.icon svg path{
+        stroke: #000;
+    }
+    .icons-set a.icon{ 
+        &:hover svg{
+            path {
+              stroke: c.$accent-color;
+              // fill: c.$accent-color;
+            }
+        }
+    }
+    .image-span svg path, 
+    .image-span svg rect, 
+    .image-span svg circle, 
+    .meet-us-item svg path, 
+    .meet-us-item svg rect, 
+    .meet-us-item svg circle{
+        stroke: #000;
+        stroke-width: 1px;;
+    }
+    .image-span, .meet-us-item {
+        &:hover{
+            svg path, svg rect, svg circle {
+                stroke: c.$accent-color;
+            }
+        }
+    }
+    .dropbtn{
+        color: #000;
+        &:before{
+            background-image: url(../images/icons/arr-down-black.svg);
+            width: 14px;
+            height: 7px;
+            top: 24px;
+            left: -12px;
+        }
+    }
+}
+
+
+.inner-page-content{
+    padding: 50px 0px 15px;
+}
+
+
+
+@media screen and (min-width: 768px){
+    .white.secondary-screen{
+        menu {
+            padding-top: 36px;
+            li a{
+                color: #606060;
+                &:hover, &.active{
+                    color: #D5AF7B;
+                }
+            }
+        }
+    }
+    .secondary-screen h1{
+        left: 250px;
+        top:40%;
+    }
+}
+
+.content-part{
+    position: relative;
+}
+
+
+blockquote{
+    font-family: inherit;
+}
+
+
+
+
+@media screen and (min-width: 1200px){
+    .secondary-screen{
+        height: 600px;
+        h1{
+            left: 340px;
+            top: 29%;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1400px){
+    .secondary-screen h1 {
+        left: 23%;
+        top: 22%;
+    }
+    .white.secondary-screen .dropbtn:before{
+        top: 25px;
+    }
+    .inner-page-content{
+        padding: 0px 0px 15px;
+    }
+}
+
+
+@media screen and (min-width: 1700px){
+    .white.secondary-screen .dropbtn:before{
+        top: 27px;
+    }
+    .secondary-screen {
+        background-position: 90% bottom;
+        h1 {
+            left: 18%;
+            top: 31%;
+        }
+    }
+}
