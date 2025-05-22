@@ -13,6 +13,6 @@ mix
     .copy('src/front/images', 'dist/front/images')
     .copy('src/front/js', 'dist/front/js')
     .browserSync({
-        proxy: "nginx",
+        proxy: "localhost/skoro_svadba/",
         files: ['dist/css', 'dist/js', './**/*.php'],
     }).sourceMaps();

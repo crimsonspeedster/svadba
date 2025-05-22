@@ -1,5 +1,5 @@
 let triggerMenu = document.querySelector('.burger-trigger');
-let header = document.querySelector('#header');
+let header = document.querySelector('.header');
 let box = document.querySelector('.box');
 let body = document.body;
 let html = document.documentElement; // Додаємо обмеження на всю сторінку
