@@ -38,6 +38,13 @@
 .two-col.right-image-type{
     padding-top: 20px;
 }
+.article , article {
+    .wrp-image-column{
+        img{
+            height: auto;
+        }
+    }
+}
 .wrp-image-column{
     width: 100%;
     border-radius: 18px;
@@ -46,6 +53,7 @@
     img{
         width: 100%;
         object-fit: cover;
+
     }
 }
 
@@ -90,7 +98,16 @@ blockquote{
         background-repeat: no-repeat;
     }
 }
-
+    blockquote{
+        P{
+            font-family: Montserrat;
+            color: #D5AF7B;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 17px;
+            line-height: 142%;
+        }
+    }
 
 .reason-name{
     color: #D5AF7B;
@@ -176,6 +193,17 @@ blockquote{
     }
 }
 
+
+.wp-block-button:hover{
+    .wp-block-button__link{
+        color: #fff;
+    }
+}
+.wp-block-button__link{
+  color: #D5AF7B;
+  background-color: transparent;
+  padding: 0px;
+}
 .slider-section{
     .btn-wrap{
         margin-top: 20px;
@@ -309,6 +337,7 @@ blockquote{
     .images-unique{
         display: flex;
         justify-content: space-between;
+        margin: 30px 0px;
     }
     .owl-sect{
         // position: relative;
@@ -380,9 +409,11 @@ blockquote{
             margin-bottom: 20px;
         }        
     }
+    .wp-block-heading.sections-name{
+        margin-bottom: 50px;
+    }
     .sections-name.margin100{
         margin-bottom: 50px;
-
     }
 }
 
@@ -400,11 +431,22 @@ blockquote{
         height: 630px;
         margin-bottom: 80px;
     }
+    .images-unique{
+        margin-bottom: 70px;
+    }
     blockquote{
         font-size: 30px;
         max-width: 800px;
-        padding-bottom: 40px;
+        padding-bottom: 20px;
         padding-top:30px;
+        margin-bottom: 130px;
+        P{
+            font-family: Montserrat;
+            color: #D5AF7B;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 36px;
+        }
         &:after{
             height: 40px;
         }
@@ -532,6 +574,7 @@ blockquote{
         margin-bottom: 45px;
         font-weight: 700;
     }
+
 }
 
 @media screen and (min-width: 1760px){

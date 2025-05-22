@@ -31,33 +31,40 @@
 
 
 .white.secondary-screen{
-    .icons-set a.icon svg path{
-        stroke: #000;
+    .image-span img, .meet-us-item img {
+        filter: invert(0);
     }
-    .icons-set a.icon{ 
-        &:hover svg{
-            path {
-              stroke: c.$accent-color;
-              // fill: c.$accent-color;
-            }
-        }
+    .icons-set a.icon img {
+        filter: invert(0);
     }
-    .image-span svg path, 
-    .image-span svg rect, 
-    .image-span svg circle, 
-    .meet-us-item svg path, 
-    .meet-us-item svg rect, 
-    .meet-us-item svg circle{
-        stroke: #000;
-        stroke-width: 1px;;
-    }
-    .image-span, .meet-us-item {
-        &:hover{
-            svg path, svg rect, svg circle {
-                stroke: c.$accent-color;
-            }
-        }
-    }
+
+    // .icons-set a.icon svg path{
+    //     stroke: #000;
+    // }
+    // .icons-set a.icon{ 
+    //     &:hover svg{
+    //         path {
+    //           stroke: c.$accent-color;
+    //           // fill: c.$accent-color;
+    //         }
+    //     }
+    // }
+    // .image-span svg path, 
+    // .image-span svg rect, 
+    // .image-span svg circle, 
+    // .meet-us-item svg path, 
+    // .meet-us-item svg rect, 
+    // .meet-us-item svg circle{
+    //     stroke: #000;
+    //     stroke-width: 1px;;
+    // }
+    // .image-span, .meet-us-item {
+    //     &:hover{
+    //         svg path, svg rect, svg circle {
+    //             stroke: c.$accent-color;
+    //         }
+    //     }
+    // }
     .dropbtn{
         color: #000;
         &:before{

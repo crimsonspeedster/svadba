@@ -128,10 +128,11 @@ ul.breadcrumb {
   margin-top: 0px;
   z-index: 1;
 }
-ul.breadcrumb li {
+ul.breadcrumb span {
   // display: block;
   font-size: 14px;
   font-family: inherit;
+  padding: 0px 5px;
   a {
     text-decoration: none;
     color: #514c4c;
@@ -141,11 +142,15 @@ ul.breadcrumb li {
     }
   }
 }
-ul.breadcrumb li + li:before {
-  padding: 8px;
-  color: #514c4c;
-  content: "-";
+.breadcrumb_last{
+  color: #000;
+  text-shadow: 0px 0px #000;
 }
+// ul.breadcrumb span + span:before {
+//   padding: 8px;
+//   color: #514c4c;
+//   content: "-";
+// }
 //   ul.breadcrumb li a {color: green;}
 .blog-main {
 }
@@ -187,7 +192,20 @@ ul.pagination {
     stroke: c.$accent-color;
   }
 }
-
+.page-numbers{
+  max-width: 20px;
+}
+ul.page-numbers{
+  position: relative;
+  width: 100%;
+  .prev ,
+  .next {
+    position: absolute;
+  }
+}
+.next .page-numbers{
+  right: 0px;
+}
 .content-blog {
   padding: 0px 20px 100px 20px;
   margin: 0 auto;
@@ -364,6 +382,7 @@ ul.pagination {
     width: 50px;
     margin-top: 10px;
     margin-left: -1px;
+
   }
   .footer-info .icon {
     width: 30px;
@@ -375,6 +394,7 @@ ul.pagination {
     align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 0px;
+    padding-left: 10px;
     li {
       margin-bottom: 15px;
       a {
@@ -445,12 +465,13 @@ ul.pagination {
   .container-blog {
     width: 520px;
   }
-  a.h2 {
-    text-align: center;
-  }
   .article,
   article {
-    text-align: center;
+    text-align: left;
+    h2 {
+      text-align: left;
+    }
+    
   }
 }
 
@@ -498,6 +519,7 @@ ul.pagination {
     max-width: 75%;
     margin-bottom: 100px;
   }
+
   .contactpage-top .footer-info {
     position: relative;
     flex-direction: row;
@@ -511,7 +533,8 @@ ul.pagination {
   }
   .contactpage-top .footer-info li {
     margin-bottom: 0px;
-    width: 44%;
+    width: 100%;
+    font-size: 14px;
   }
 }
 
@@ -591,6 +614,39 @@ ul.pagination {
       margin-right: 30px;
     }
   }
+
+  .contactpage-top{
+    .footer-info {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px 15px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Ряд 1 */
+    .footer-info li:nth-child(1) { grid-column: 1; grid-row: 1; }
+    .footer-info li:nth-child(2) { grid-column: 2; grid-row: 1; }
+    .footer-info li:nth-child(3) { grid-column: 3; grid-row: 1; }
+    .footer-info li:nth-child(4) { grid-column: 4; grid-row: 1; }
+    /* Ряд 2 */
+    .footer-info li:nth-child(5) { grid-column: 1 / span 2; grid-row: 2; }
+    .footer-info li:nth-child(6) { grid-column: 3 / span 2; grid-row: 2; }
+
+  }
+  .footer-info .icon{
+    margin-top: 0px;
+  }
+    .footer-info .icon img {
+      height: 28px;
+      width: 26px;
+      object-fit: contain;
+  }
+  .footer-info li p{
+    font-size: 19px;
+  }
+
 }
 
 @media (min-width: 1200px) {
@@ -690,7 +746,7 @@ ul.pagination {
   }
 
   .contactpage-top .footer-info li {
-    width: 23%;
+    width: 100%;
   }
   .contactpage-top .footer-info {
     align-items: center;
@@ -766,7 +822,7 @@ ul.pagination {
     font-size: 19px;
     top:30px;
   }
-  .article h2{
+  .article h2, article h2{
     text-align: left;
   }
 }
@@ -909,7 +965,7 @@ ul.pagination {
   ul.breadcrumb {
     top: 82px;
     left: 450px;
-    li {
+    span {
       font-size: 17px;
       font-weight: 400;
       &:last-child{

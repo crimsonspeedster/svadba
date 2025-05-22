@@ -235,6 +235,10 @@ body {
       margin: 0px 17px 0px 0px;
       transition: all ease 0.3s;
       transition: filter 0.3s ease; /* Тільки filter */
+      &:first-child{
+        display: none;
+      }
+      
       img{
         transition: all ease 0.3s;
         transition: filter 0.3s ease; /* Тільки filter */
@@ -561,11 +565,14 @@ body {
       justify-content: center;
       position: absolute;
       right: 20px;
-      top: 168px;
+      top: 118px;
       flex-direction: column;
       .meet-us-item {
-        margin: 0px 5px 32px 0px;
+        margin: 0px 5px 15px 0px;
         cursor: pointer;
+       &:first-child{
+        display: block;
+      }
       }
     }
     .icons-set {
@@ -695,7 +702,7 @@ body {
       width: 35px;
     }
     .meet-us .meet-us-item {
-      margin: 0px 5px 47px 0px;
+      margin: 0px 5px 10px 0px;
     }
   }
   
