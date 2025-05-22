@@ -48,7 +48,7 @@ else {
 <?php wp_body_open(); ?>
 
 <div class="<?= $main_classes; ?>" <?= $main_data_bg; ?>>
-    <header id="header" class="">
+    <header  class="header">
         <div class="top-nav">
             <a href="<?= get_home_url(); ?>" class="logo-place sanimate fadeInLeft" data-delay="100ms" data-duration="300ms" data-timing="ease-in-out">
                 <?php

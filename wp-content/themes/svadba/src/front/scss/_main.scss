@@ -260,6 +260,8 @@
   overflow: hidden;
   img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -597,26 +599,40 @@
   padding: 40px 15px;
   color: #000;
   text-align: center;
-  margin-top: 30px;
-  
+  // margin-top: 30px;
+  .footer__bg{
+    position: absolute;
+    z-index: 0;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 
 }
 
 /* Псевдоелемент для прозорого фону */
-.footer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.3; /* 30% прозорості */
-  z-index: 1; /* Щоб фон був позаду */ 
-  color: #000;
-}
+// .footer::before {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   opacity: 0.3; /* 30% прозорості */
+//   z-index: 1; /* Щоб фон був позаду */ 
+//   color: #000;
+// }
 
 .footer-content {
   position: relative;
@@ -685,18 +701,26 @@
 .footer-info {
     list-style: none;
     padding: 0;
-    margin-bottom: 54px;
-    margin-left: 30px;
-    .icon{
-      width: 19px;
+    margin-bottom: 25px;
+    // margin-left: 30px;
+    li p{
+      display: flex;
+      text-align: left;
+      line-height: normal;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .icon{      
       margin-right: 10px;;
+      margin-top: 10px;
+      // width: 60px;
+      // margin-left: -3px;
       &.loc{
-        width: 25px;
-        margin-top: 10px;
-        margin-left: -3px;
       }
-      svg{
-        width: 100%;
+      svg, img{
+        width: 25px;
+
+        // float: left;;
       }
     }
     li a:hover{
@@ -710,18 +734,22 @@
     margin-bottom: 10px;
 }
 
-.footer-info a {
+.footer-info a, .footer-info p  {
     display: flex;
     align-items: center;
+    text-align: left;;
     gap: 8px;
     text-decoration: none;
     transition: color 0.3s;
     color: #000;
+    font-size: 16px;
+    font-family: inherit;;
+    font-weight: 400;
     span{
       text-align: left;
     }
     span.icon{
-      margin-right: 20px;;
+      // margin-right: 20px;;
     }
 }
 
@@ -742,14 +770,23 @@
 .footer-capitali {
     display: flex;
     gap: 20px;
-    margin: 20px 0 40px;
+    // margin: 20px 0 40px;
     max-width: 80px ;
-    margin: 20px auto 40px;
+    margin: 20px auto 20px;
     display: flex;
     justify-content: space-between;
     z-index: 9;
+    img{
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+      
+    }
+
     a{
       max-height: 33px;
+      box-sizing: border-box;
+      display: block;
 
       svg{
         height: 100%;
@@ -767,6 +804,29 @@
       }
     }
 }
+
+.footer-column--2 .menu {
+  display: grid;
+  gap: 8px; /* або 16px, як зручно */
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+  li{
+    text-align: left;
+    padding-left: 20px;
+    margin-bottom: 5px;
+    a{
+      font-size: 16px;
+      color: #000;
+      transition: all ease 0.3s;
+      text-decoration: none;;
+    }
+
+  }
+}
+
+
+
+
 
 .footer-capitali .social-icon svg {
   transition: all ease 0.3s;
@@ -905,6 +965,15 @@
   font-weight: 500;
   color: #000;
   font-family: Montserrat;
+  a{
+      color: #D5AF7B;
+      font-family: Montserrat;
+      text-decoration: none;
+      transition: all ease 03s;
+      &:hover{
+        text-decoration: underline;
+      }
+  }
 
 }
 
@@ -1027,7 +1096,7 @@ input:focus {
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  top: 0px;
+  top: 10px;
   left: 0px;
 }
 
@@ -1372,6 +1441,7 @@ input:focus {
     bottom: -55px;
     max-width: max-content;
     min-width: 400px;
+    z-index: 9999;
   }
   .footer-content {
     max-width: 700px;
@@ -1399,11 +1469,11 @@ input:focus {
     position: relative;
     padding: 130px 15px;
   }
-  .footer-capitali{
-    position: absolute;
-    top:100px;
-    left:20px;
-  }
+  // .footer-capitali{
+  //   position: absolute;
+  //   top:100px;
+  //   left:20px;
+  // }
   .only-desktop{
     display: block;
   }

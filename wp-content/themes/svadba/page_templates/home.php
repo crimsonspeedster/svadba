@@ -49,7 +49,7 @@ $contact__form_id = get_field('contact__form_id');
             <p class="gold-text scroll sanimate" data-delay="200ms">
                 <?=
                     sprintf(
-                        pll__('<a href="%s">Хочу</a> подробиць'),
+                        pll__('<a class="scroll-to-form" href="%s">Хочу</a> подробиць'),
                         $common__link['url']
                     );
                 ?>

@@ -20,7 +20,7 @@ if (triggerMenu && header && box) {
 }
 
 let dropTrigger = document.querySelector('.dropdown');
-let dropContent = document.querySelector('#myDropdown');
+let dropContent = document.querySelector('.dropdown-content');
 dropTrigger.addEventListener('click', ()=>{
   dropContent.classList.toggle("show");
   dropTrigger.classList.toggle("show1");
@@ -41,6 +41,17 @@ dropTrigger.addEventListener('click', ()=>{
     }
   }
 
+document.querySelectorAll('.scroll-to-form').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector('.form-section').scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
+
+
 let menuContent = document.querySelector('.box');
 let contactsBox = document.querySelector('.contacts-box');
 let menu = document.querySelector('.header__menu');
@@ -54,12 +65,15 @@ let TopNav = document.querySelector('.top-nav');
 
 
 function handleResize() {
+
+  // console.log(window.innerWidth);
+  
   if (window.innerWidth > 768) {
     if (!isMoved) {
       header.insertAdjacentElement('afterend', menuContent);
       header.insertAdjacentElement('afterend', contactsBox);
       header.insertAdjacentElement('afterend', menu);
-      // TopNav.insertAdjacentElement('beforeend', LangBox);
+      TopNav.insertAdjacentElement('beforeend', LangBox);
       isMoved = true;
     }
   } else {
@@ -67,6 +81,7 @@ function handleResize() {
       menuParent.appendChild(menuContent);
       menuOriginalParent.appendChild(menu);
       contactsParent.appendChild(contactsBox);
+      menuContent.appendChild(LangBox);
       isMoved = false;
     }
   }
