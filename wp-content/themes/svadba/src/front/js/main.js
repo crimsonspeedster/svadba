@@ -43,7 +43,7 @@ dropTrigger.addEventListener('click', ()=>{
 
 let menuContent = document.querySelector('.box');
 let contactsBox = document.querySelector('.contacts-box');
-let menu = document.querySelector('menu');
+let menu = document.querySelector('.header__menu');
 let menuParent = menuContent.parentElement; // Початковий батьківський елемент .box
 let contactsParent = contactsBox.parentElement; // Початковий батьківський елемент .contacts-box
 let menuOriginalParent = menu.parentElement; // Початковий батьківський елемент menu

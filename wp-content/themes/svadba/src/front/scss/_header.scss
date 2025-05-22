@@ -34,7 +34,7 @@ body {
     padding: 10px 2px 23px 2px;
     position: relative;
     // z-index: 15;;
-    menu {
+    menu, .header__menu {
       list-style: none;
       padding-left: 0px;
     }
@@ -189,7 +189,7 @@ body {
     }
   }
 
-  menu {
+  menu, .header__menu {
     padding-left: 0px;
     margin-bottom: 53px;
 
@@ -494,7 +494,7 @@ body {
       font-size: 20px;
     }
 
-    menu {
+    menu, .header__menu {
       max-width: 300px;
       padding-left: 28px;
       padding-top: 81px;
@@ -584,9 +584,10 @@ body {
     .contacts-list span.image-span{
       margin-left: 2px;
     }
-    menu {
+    menu, .header__menu {
       padding-top: 36px;
     }
+    .main-screen .header__menu,
     .main-screen menu {
       padding-top: 80px;
     }
@@ -602,7 +603,7 @@ body {
     .logo-place {
       width: 220px;
     }
-    menu {
+    .header__menu {
       padding-left: 120px;
       li {
         margin-bottom: 30px;

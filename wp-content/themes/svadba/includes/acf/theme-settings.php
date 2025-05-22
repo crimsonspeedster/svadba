@@ -14,7 +14,7 @@ if( function_exists('acf_add_local_field_group') ) {
             [
                 'key' => 'acf_theme_settings_common-header_logo',
                 'name' => 'common__header_logo',
-                'label' => 'Header logo',
+                'label' => 'Header logo (for light)',
                 'type' => 'image',
                 'return_format' => 'id',
                 'required' => 1,
@@ -22,7 +22,7 @@ if( function_exists('acf_add_local_field_group') ) {
             [
                 'key' => 'acf_theme_settings_common-header_logo--dark',
                 'name' => 'common__header_logo_dark',
-                'label' => 'Header logo',
+                'label' => 'Header logo (for dark)',
                 'type' => 'image',
                 'return_format' => 'id',
                 'required' => 1,

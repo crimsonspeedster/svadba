@@ -12,6 +12,22 @@ if( function_exists('acf_add_local_field_group') ):
                 'type' => 'tab',
             ],
             [
+                'key' => 'template-home_common-image--main',
+                'name' => 'common__image_main',
+                'label' => 'Image (main)',
+                'type' => 'image',
+                'return_format' => 'id',
+                'required' => 1,
+            ],
+            [
+                'key' => 'template-home_common-image--logo',
+                'name' => 'common__image_logo',
+                'label' => 'Image (logo)',
+                'type' => 'image',
+                'return_format' => 'id',
+                'required' => 1,
+            ],
+            [
                 'key' => 'template-home_common-link',
                 'name' => 'common__link',
                 'label' => 'Link',

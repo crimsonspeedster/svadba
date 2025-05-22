@@ -6,7 +6,6 @@ if (is_singular('post')) {
 }
 ?>
 </main>
-
 <footer class="footer">
     <div class="footer__bg">
         <?= wp_get_attachment_image($common__footer_bg, 'full'); ?>

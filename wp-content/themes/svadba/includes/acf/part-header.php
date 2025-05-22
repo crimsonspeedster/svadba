@@ -27,6 +27,14 @@ if( function_exists('acf_add_local_field_group') ):
                 'type' => 'text',
                 'required' => 0,
             ],
+            [
+                'key' => 'part-header_is-dark',
+                'label' => 'Is dark?',
+                'name' => 'header__is_dark',
+                'type' => 'true_false',
+                'default_value' => 0,
+                'ui' => 1,
+            ],
         ],
         'location' => array(
             array(
@@ -34,6 +42,11 @@ if( function_exists('acf_add_local_field_group') ):
                     'param' => 'post_type',
                     'operator' => '==',
                     'value' => 'page',
+                ),
+                array(
+                    'param' => 'page_template',
+                    'operator' => '!=',
+                    'value' => 'page_templates/home.php',
                 ),
             ),
         ),
