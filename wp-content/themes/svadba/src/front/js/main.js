@@ -6,17 +6,12 @@ let html = document.documentElement; // Додаємо обмеження на �
 
 if (triggerMenu && header && box) {
     triggerMenu.addEventListener('click', () => {
-        let isActive = header.classList.toggle('active');
+        const isActive = header.classList.toggle('active');
         box.classList.toggle('active');
-
-        if (isActive) {
-            html.classList.add('no-scroll'); 
-        } else {
-            html.classList.remove('no-scroll'); 
-        }
+        html.classList.toggle('no-scroll', isActive);
     });
 } else {
-    console.error('Елемент .burger-trigger, #header або .box не знайдено в DOM.');
+    console.warn('Один або кілька елементів (.burger-trigger, #header, .box) не знайдено.');
 }
 
 let dropTrigger = document.querySelector('.dropdown');
@@ -148,7 +143,7 @@ window.addEventListener('scroll', function() {
 });
 
 
-const selectors = ['p', 'h2', 'blockquote'];
+const selectors = ['p', 'h2', 'blockquote', '.wp-block-image', 'image-it'];
 
 selectors.forEach(selector => {
   document.querySelectorAll(selector).forEach(el => {
@@ -157,13 +152,19 @@ selectors.forEach(selector => {
 });
 
 // Обробка зображень окремо, з виключенням img всередині .owl-theme
+// document.querySelectorAll('img').forEach(img => {
+//   if (!img.closest('.owl-theme') || !img.closest('.wrp-image-column')) {
+//     img.classList.add('sanimate', 'scroll');
+//   }
+// });
+
 document.querySelectorAll('img').forEach(img => {
-  if (!img.closest('.owl-theme') || !img.closest('.wrp-image-column')) {
+  if (img.closest('.image-it') ) {
     img.classList.add('sanimate', 'scroll');
+  } else {
+    return;
   }
 });
-
-
 
 let blocks = document.querySelectorAll('.scroll.sanimate');
 // let clientsSlides = document.querySelectorAll('.clients-slider > .slide.sanimate');

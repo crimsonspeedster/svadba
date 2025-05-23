@@ -176,6 +176,8 @@ blockquote{
     padding-right: 20px;;
 }
 
+
+
 .owl-sect{
     position: relative;
     // margin: 0px -20px;
@@ -189,6 +191,7 @@ blockquote{
             width: 100%;
             height: 100%;
             object-fit: cover;
+            opacity: 0;
         }
     }
 }
@@ -294,6 +297,30 @@ blockquote{
 
 
 @media screen and (min-width:768px){
+    .two-col{
+
+        &.left-image-type {
+
+           .image-column {
+               width: 501px;
+               order: 1;
+           }
+           .text-column{
+               order: 2;
+           }
+
+
+       }
+       &.right-image-type{
+           .image-column {
+               width: 501px;
+               order: 2;
+           }
+           .text-column{
+               order: 1;
+           }
+       }
+    }
     blockquote{
         max-width: 580px ;
         margin: 30px auto 60px;
@@ -410,7 +437,8 @@ blockquote{
         }        
     }
     .wp-block-heading.sections-name{
-        margin-bottom: 50px;
+         margin: 70px auto 60px;
+        text-align: center;
     }
     .sections-name.margin100{
         margin-bottom: 50px;
@@ -456,6 +484,7 @@ blockquote{
         max-width: 1130px;
         margin: 50px auto;
     }
+
 }
 
 
@@ -463,6 +492,7 @@ blockquote{
 
     .content{
         max-width: 1322px;
+        margin-bottom: 150px;
     }
     .two-col{
         &.right-image-type{
@@ -475,12 +505,7 @@ blockquote{
                 width: 546px;
             }
         }
-        &.left-image-type {
-
-            .image-column {
-                width: 501px;
-            }
-        }
+       
 
     }
 

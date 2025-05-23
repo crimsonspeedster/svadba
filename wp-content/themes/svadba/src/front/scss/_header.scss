@@ -497,6 +497,15 @@ body {
           filter: invert(1);
       }    
     }
+    .dark.secondary-screen{
+      .dropbtn{
+        color:#fff;        
+      }
+      .dropbtn:before{
+        filter: invert(1);
+      }
+
+    }
     .only-mob {
       display: none;
     }
@@ -612,6 +621,11 @@ body {
     .icons-set{
       padding-top: 12px;
     }
+    .icons-set a.icon {
+        width: 30px;
+        margin-right: 2px;
+        margin-left: 5px;
+    }
     .icons-set a.icon svg path{
       stroke: #fff;
       stroke-width: 2px;
@@ -692,8 +706,8 @@ body {
       z-index: 22;
     }
     .meet-us {
-      right: 31px;
-      top: 258px;
+      right: 41px;
+      top: 178px;
     }
     .meet-us .meet-us-item svg:last-child {
       width: 34px;

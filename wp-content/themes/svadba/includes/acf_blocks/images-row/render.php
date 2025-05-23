@@ -5,7 +5,7 @@ $repeater = get_field('repeater');
 
 if ($is_preview) {
     ?>
-    <img style="width: 100%; height: auto;" src="<?= get_field('preview_image'); ?>" alt="preview" />
+    <img  style="width: 100%; height: auto;" src="<?= get_field('preview_image'); ?>" alt="preview" />
     <?php
 }
 else {
