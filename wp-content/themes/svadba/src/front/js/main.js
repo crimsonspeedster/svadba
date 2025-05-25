@@ -221,3 +221,41 @@ headerIs.querySelectorAll('.menu_item').forEach(li => {
     // }
   });
 });
+
+
+
+
+
+
+
+if(document.querySelector(".blog")){
+  const pagList = document.querySelector('ul.page-numbers');
+  const allPageNumbers = pagList.querySelectorAll('li');
+  const gag = document.createElement("li");
+  gag.classList.add("pag-gag");
+  const grp = document.createElement("span");
+  grp.classList.add("center-paging");
+  
+  allPageNumbers.forEach(el => {
+    if (!['prev', 'next'].some(className => el.firstElementChild.classList.contains(className))){
+      grp.insertAdjacentElement("beforeend", el);
+    }
+  });
+
+  const firstelemPag = allPageNumbers[0];
+  const lastElemPag = allPageNumbers[allPageNumbers.length-1];
+  
+  if (firstelemPag.firstElementChild.classList.contains('prev')){
+    firstelemPag.insertAdjacentElement("afterend", grp);
+    if (!lastElemPag.firstElementChild.classList.contains("next")){
+      grp.insertAdjacentElement("afterend", gag);
+    }
+  } else {
+    lastElemPag.insertAdjacentElement("beforebegin", grp);
+    if (!firstelemPag.firstElementChild.classList.contains('prev')){
+      grp.insertAdjacentElement("beforebegin", gag);
+    }
+  }
+
+}
+

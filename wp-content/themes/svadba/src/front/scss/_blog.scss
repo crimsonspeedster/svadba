@@ -170,11 +170,12 @@ ul.breadcrumb span {
 .center-paging {
   display: flex;
   align-items: center;
+  max-width: 500px;
 }
-.pagination a {
+.page-numbers {
   color: black;
   float: left;
-  font-size: 15px;
+  // font-size: 15px;
   padding: 8px 10px;
   text-decoration: none;
   transition: background-color 0.3s;
@@ -193,19 +194,46 @@ ul.breadcrumb span {
   }
 }
 .page-numbers{
-  max-width: 20px;
+  // max-width: 20px;
 }
 ul.page-numbers{
   position: relative;
   width: 100%;
-  .prev ,
-  .next {
-    position: absolute;
-  }
+  justify-content: space-between;
+  // .prev ,
+  // .next {
+  //   position: absolute;
+  // }
 }
 .next .page-numbers{
   right: 0px;
 }
+.page-numbers{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  .page-numbers{
+    display: block;
+  }
+  a{
+   color: black;
+   float: left;
+   font-size: 15px;
+   padding: 8px 10px;
+   text-decoration: none;
+   transition: background-color 0.3s;
+   &.active,
+   &:hover
+   {
+     color: c.$accent-color;
+   }
+   &.disabled {
+     pointer-events: none;
+   }
+
+  }
+}
+
 .content-blog {
   padding: 0px 20px 100px 20px;
   margin: 0 auto;
@@ -493,7 +521,7 @@ ul.page-numbers{
     left: 223px;
     z-index: 10;
   }
-  .pagination a {
+  .pagination a, .page-numbers.current {
     font-size: 20px;
   }
   .content-blog img {
@@ -1034,7 +1062,7 @@ ul.page-numbers{
     padding-top: 0px;
     margin-bottom: 150px;
   }
-  .pagination a {
+  .pagination a , .page-numbers.current{
     font-size: 29px;
     padding: 8px 21px;
   }
