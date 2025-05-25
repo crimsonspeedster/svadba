@@ -6,7 +6,7 @@ $current = max(1, get_query_var('paged'));
 
 if ($total > 1) {
     ?>
-    <ul class="pagination">
+    <div class="pagination">
         <?php
             echo paginate_links(array(
                 'total' => $total,
@@ -27,6 +27,6 @@ if ($total > 1) {
                 ',
             ));
         ?>
-    </ul>
+    </div>
     <?php
 }

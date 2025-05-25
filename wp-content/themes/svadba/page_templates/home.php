@@ -122,7 +122,6 @@ $contact__form_id = get_field('contact__form_id');
                                         ?>
                                         <div class="wrap-images <?= $index === 0 ? 'wrap-big-pic' : 'wrap-pic-small '; ?> scroll sanimate">
                                             <?= wp_get_attachment_image($item['image_id'], 'full'); ?>
-                                            <img src="./images/new-img/4.webp" alt="nice photo">
                                         </div>
                                         <?php
                                     }

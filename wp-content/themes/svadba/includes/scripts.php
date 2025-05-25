@@ -17,13 +17,15 @@ add_action( 'wp_enqueue_scripts', function () {
 
 
     if (is_front_page() || is_page_template('page_templates/contacts.php')) {
-        wp_enqueue_script('main-page', get_template_directory_uri() . '/dist/front/js/main-page.js', [], $ver,  true);
         wp_enqueue_script('owl', get_template_directory_uri() . '/dist/front/js/owl.js', [], $ver,  true);
     }
     elseif (is_singular('post')) {
         wp_enqueue_script('sticky-blog', get_template_directory_uri() . '/dist/front/js/sticky-blog.js', [], $ver,  true);
     }
 
-    wp_enqueue_script('front', get_template_directory_uri() . '/dist/front/js/main.js', [], $ver,  true);
+    if (!is_404()) {
+        wp_enqueue_script('front', get_template_directory_uri() . '/dist/front/js/main.js', [], $ver,  true);
+    }
+
     wp_enqueue_script('front-backImage', get_template_directory_uri() . '/dist/front/js/backImage.js', [], $ver,  true);
 }, 10010 );

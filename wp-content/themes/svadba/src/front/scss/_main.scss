@@ -1135,7 +1135,9 @@ input:focus {
 
 /* Іконка галочки */
 .checkbox input[type="checkbox"]:checked + label:before,
-.checkbox2 input[type="checkbox"]:checked + label:before {
+.checkbox2 input[type="checkbox"]:checked + label:before,
+.checkbox2:has(input[type="checkbox"]:checked) label:before
+{
   background-image: url('../images/icons/check2.svg'); /* Вкажи шлях до своєї картинки галочки */
   background-color: transparent;
   border-color: #fff;

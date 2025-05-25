@@ -161,7 +161,7 @@ ul.breadcrumb span {
   padding-bottom: 150px;
 }
 /* Pagination links */
-ul.pagination {
+.pagination {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1030,7 +1030,7 @@ ul.page-numbers{
   .container-blog {
     padding: 40px 10px 238px;
   }
-  ul.pagination {
+  .pagination {
     padding-top: 0px;
     margin-bottom: 150px;
   }
