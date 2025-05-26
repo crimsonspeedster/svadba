@@ -53,16 +53,6 @@ add_action('after_setup_theme', function () {
 });
 add_action('widgets_init', function () {
     register_sidebar([
-        'name'          => 'Mobile sidebar',
-        'id'            => 'mobile-sidebar',
-        'description'   => '',
-        'before_widget' => '',
-        'after_widget'  => '',
-        'before_title'  => '',
-        'after_title'   => '',
-    ]);
-
-    register_sidebar([
         'name'          => 'Footer column 1',
         'id'            => 'footer-column-1',
         'description'   => '',
