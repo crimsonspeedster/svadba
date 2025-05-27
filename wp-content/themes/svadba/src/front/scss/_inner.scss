@@ -30,16 +30,6 @@
 }
 
 
-.secondary-screen.dark{
-    .icons-set a.icon{
-        filter: invert(1);
-
-    }
-    .logo-place img {
-        width: 100%;
-        filter: invert(2);
-    }
-}
 .white.secondary-screen{
     .image-span img, .meet-us-item img {
         filter: invert(0);
