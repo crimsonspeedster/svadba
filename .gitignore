@@ -107,3 +107,7 @@ wp-content/themes/*
 # !wp-content/mu-plugins/example-mu-plugin/
 !wp-config-template.php
 !run.sh
+
+# IDE and editor code
+.vscode/
+.idea/
