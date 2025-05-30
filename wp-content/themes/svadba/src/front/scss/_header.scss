@@ -38,6 +38,14 @@ header {
   }
 }
 
+.header__menu li.current-menu-item{
+  a 
+  {
+    color: #D5AF7B;
+  }
+
+}
+
 .logo-place {
   width: 129px;
   height: 37px;
@@ -404,6 +412,7 @@ menu,
   background-color: transparent;
   position: relative;
   z-index: 8;
+   text-transform: uppercase;
 
   &:before {
     content: "";
@@ -677,21 +686,31 @@ header.active {
 
       svg,
       img {
-        width: 100%;
-        height: 30px;
+        width: 41px;
+        height: 41px;
+        margin-right: 25px;
+      }
+    }
+  }
+  
+
+  .dark{
+    .icons-set {
+      svg, img {
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
       }
     }
   }
 
-
   .logo-place {
-    width: 172px;
+    width: 160px;
     z-index: 999;
   }
 
   .meet-us .meet-us-item svg:last-child,
   .meet-us .meet-us-item img:last-child {
-    width: 26px;
+    width: 42px;
+    margin-bottom: 23px;
   }
 
   .image-span,
@@ -714,24 +733,27 @@ header.active {
   .icons-set {
     padding-top: 12px;
   }
+ 
 
-  .icons-set a.icon {
-    width: 30px;
-    margin-right: 2px;
-    margin-left: 5px;
-  }
 
-  .icons-set a.icon svg path {
-    stroke: #fff;
-    stroke-width: 2px;
-  }
 
-  .icons-set a.icon img {
-    filter: invert(1);
-    width: 25px;
-    max-height: 25px;
-    object-fit: cover;
-  }
+  // .icons-set a.icon {
+  //   width: 30px;
+  //   margin-right: 2px;
+  //   margin-left: 5px;
+  // }
+
+  // .icons-set a.icon svg path {
+  //   stroke: #fff;
+  //   stroke-width: 2px;
+  // }
+
+  // .icons-set a.icon img {
+  //   filter: invert(1);
+  //   width: 25px;
+  //   max-height: 29px;
+  //   object-fit: cover;
+  // }
 }
 
 /* Для десктопів */
@@ -777,7 +799,7 @@ header.active {
   }
 
   .dropdown {
-    top: 51px;
+    top: 39px;
     right: 44px;
     z-index: 25;
   }
@@ -786,6 +808,7 @@ header.active {
     font-size: 25px;
     font-weight: 300;
     letter-spacing: 5.2px;
+   
   }
 
   .dropbtn:before {
@@ -798,16 +821,24 @@ header.active {
   .icons-set {
     padding-left: 55px;
     margin-right: 136px;
-    padding-top: 17px;
+    padding-top: 0px;
   }
 
   .icons-set a.icon {
-    width: 45px;
+      width: 36px;
+      height: 36px;
+      margin-right: 25px;
+    img{
+      width: 100%;
+    }
 
     svg {
       width: 100%;
     }
   }
+
+
+
 
   .contacts-list_item {
     right: 47px;

@@ -10,7 +10,7 @@ $('.slider-wrapper').each(function () {
         nav: false,
         dots: false,
         responsive: {
-            0: { items: 1 },
+            0: { items: 1, autoWidth: true },
             600: { items: 3, autoWidth: true },
             1000: { items: 3, autoWidth: true }
         }

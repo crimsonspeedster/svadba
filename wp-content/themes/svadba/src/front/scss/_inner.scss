@@ -86,16 +86,21 @@
 
 @media screen and (min-width: 768px){
     .white.secondary-screen{
-        .header__menu {
+        .header__menu  {
             padding-top: 36px;
-            li a{
+            li.menu-item.current-menu-item a.menu_item-link{               
+                color: #D5AF7B;
+                }
+            }
+            li.menu-item a.menu_item-link{
                 color: #606060;
                 &:hover, &.active{
                     color: #D5AF7B;
                 }
-            }
+            }            
         }
-    }
+        
+    
     .secondary-screen h1{
         left: 250px;
         top:40%;
@@ -148,6 +153,18 @@ blockquote{
         h1 {
             left: 18%;
             top: 31%;
+        }
+    }
+}
+
+.for-404{
+    a{
+        color: #D5AF7B;
+        font-family: inherit;
+        transition: all ease 0.3s;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
         }
     }
 }
