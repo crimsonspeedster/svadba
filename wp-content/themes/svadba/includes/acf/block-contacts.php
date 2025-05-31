@@ -7,6 +7,19 @@ if( function_exists('acf_add_local_field_group') ):
         'title' => 'Contacts',
         'fields' => [
             [
+                'key' => 'block-contacts_lang',
+                'label' => 'Show on this lang',
+                'name' => 'block_contacts__lang',
+                'type' => 'select',
+                'choices' => [],
+                'allow_null' => 1,
+                'multiple' => 0,
+                'required' => 0,
+                'ui' => 1,
+                'return_format' => 'value',
+                'ajax' => 0,
+            ],
+            [
                 'key' => 'block-contacts-repeater',
                 'label' => 'Repeater',
                 'name' => 'block_contacts__repeater',

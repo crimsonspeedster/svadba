@@ -3,6 +3,7 @@ $is_preview = get_field('is_preview');
 
 $footer_info__logo = get_field('footer_info__logo');
 $footer_info__social = get_field('footer_info__social');
+$footer_info__lang = get_field('footer_info__lang');
 
 if ($is_preview) {
     ?>
@@ -10,6 +11,9 @@ if ($is_preview) {
     <?php
 }
 else {
+    if (function_exists('pll_current_language') && $footer_info__lang && $footer_info__lang !== pll_current_language())
+        return;
+
     ?>
     <div <?= get_block_wrapper_attributes(['class' => 'footer-info']); ?>>
         <a href="<?= get_home_url(); ?>" class="footer-logo scroll sanimate">
