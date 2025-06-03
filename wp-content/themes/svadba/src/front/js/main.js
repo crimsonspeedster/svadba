@@ -268,3 +268,7 @@ const closeBtn = document.querySelector('.close');
 closeBtn.addEventListener('click', function () {
     popup.classList.add('hidden');
 });
+
+document.addEventListener('wpcf7mailsent', function() {
+    popup.classList.remove('hidden');
+}, false);
