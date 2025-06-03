@@ -7,6 +7,19 @@ if( function_exists('acf_add_local_field_group') ):
         'title' => 'Social',
         'fields' => [
             [
+                'key' => 'block-social_lang',
+                'label' => 'Show on this lang',
+                'name' => 'social__lang',
+                'type' => 'select',
+                'choices' => [],
+                'allow_null' => 1,
+                'multiple' => 0,
+                'required' => 0,
+                'ui' => 1,
+                'return_format' => 'value',
+                'ajax' => 0,
+            ],
+            [
                 'key' => 'block-social-repeater',
                 'label' => 'Social',
                 'name' => 'repeater',

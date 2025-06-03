@@ -2,6 +2,7 @@
 $is_preview = get_field('is_preview');
 
 $repeater = get_field('repeater');
+$social__lang = get_field('social__lang');
 
 if ($is_preview) {
     ?>
@@ -9,6 +10,9 @@ if ($is_preview) {
     <?php
 }
 else {
+    if (function_exists('pll_current_language') && $social__lang && $social__lang !== pll_current_language())
+        return;
+
     ?>
     <ul <?= get_block_wrapper_attributes(['class' => 'meet-us']); ?>>
         <?php

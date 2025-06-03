@@ -119,3 +119,29 @@ add_filter('wpseo_breadcrumb_links', function ($links) {
 
     return $links;
 });
+add_filter('acf/load_field', function ($field) {
+    $array_compare = [
+        'block-phones_lang',
+        'block-social_lang',
+        'block-footer-info_lang',
+        'block-contacts_lang',
+    ];
+
+    if (in_array($field['key'], $array_compare)) {
+        $langs = [];
+
+        if (function_exists('pll_the_languages')) {
+            $pll_langs = pll_the_languages(['raw' => 1]);
+
+            if (!empty($pll_langs)) {
+                foreach ($pll_langs as $slug => $lang) {
+                    $langs[$slug] = $lang['name'];
+                }
+            }
+        }
+
+        $field['choices'] = $langs;
+    }
+
+    return $field;
+});

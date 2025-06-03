@@ -2,6 +2,7 @@
 $is_preview = get_field('is_preview');
 
 $repeater = get_field('repeater');
+$phones__lang = get_field('phones__lang');
 
 if ($is_preview) {
     ?>
@@ -9,6 +10,9 @@ if ($is_preview) {
     <?php
 }
 else {
+    if (function_exists('pll_current_language') && $phones__lang && $phones__lang !== pll_current_language())
+        return;
+
     ?>
     <div <?= get_block_wrapper_attributes(); ?>>
         <ul class="contacts-list">
