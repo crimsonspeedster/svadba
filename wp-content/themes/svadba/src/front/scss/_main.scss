@@ -1093,6 +1093,7 @@ input:focus {
   position: absolute;
   opacity: 0;
   cursor: pointer;
+  border: 1px solid #000;
 }
 
 .checkbox label, .checkbox2 label {
@@ -1127,7 +1128,7 @@ input:focus {
 {
   background-image: url('../images/icons/check2.svg'); /* Вкажи шлях до своєї картинки галочки */
   background-color: transparent;
-  border-color: #fff;
+  border-color: #000;
 }
 
 /* Текст посилання в чекбоксі */

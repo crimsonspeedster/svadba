@@ -69,6 +69,20 @@ if (is_singular('post')) {
         </div>
     </div>
 </footer>
+
+
+<div id="popup" class="popup hidden">
+    <div class="popup-content">
+        <span class="close">            
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.0003 14.9676L15.0238 1M1.0003 1L15.0241 14.9676" stroke="#1A2335" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+        </span>
+        <p class="norm-text popup-text">Дякуємо за звернення, наш менеджер зв'яжеться з вами.</p>
+    </div>
+</div>
+
 <?php wp_footer(); ?>
 </body>
 </html>

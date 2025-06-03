@@ -259,3 +259,12 @@ if(document.querySelector(".blog")){
 
 }
 
+
+
+const popup = document.getElementById('popup');
+const closeBtn = document.querySelector('.close');
+
+// Закриття попапу
+closeBtn.addEventListener('click', function () {
+    popup.classList.add('hidden');
+});
