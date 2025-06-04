@@ -155,7 +155,7 @@ $contact__form_id = get_field('contact__form_id');
 
                         if (!empty($trust__link)) {
                             ?>
-                            <a href="<?= $trust__link['url']; ?>" class="button side-button only-desctop" <?php getLinkAttrs($trust__link); ?>>
+                            <a href="<?= $trust__link['url']; ?>" class="button side-button scroll only-desctop" <?php getLinkAttrs($trust__link); ?>>
                                 <span><?= $trust__link['title']; ?></span>
                             </a>
                             <?php
@@ -186,6 +186,7 @@ $contact__form_id = get_field('contact__form_id');
                                         <div class="item">
                                             <div class="owl-images ">
                                                 <?= wp_get_attachment_image($item['image_id'], 'full'); ?>
+                                                <p class="slideName">slide name</p>
                                             </div>
                                         </div>
                                         <?php
@@ -214,7 +215,7 @@ $contact__form_id = get_field('contact__form_id');
 
                     if ($result__block_with_arrow) {
                         ?>
-                        <p class="small-gold"><?= $result__block_with_arrow; ?></p>
+                        <a href="#" class="small-gold"><?= $result__block_with_arrow; ?></a>
                         <?php
                     }
                 ?>

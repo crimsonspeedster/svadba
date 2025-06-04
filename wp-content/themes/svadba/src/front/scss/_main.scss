@@ -496,6 +496,7 @@
   bottom: 27px;
   left: 24px;
   z-index: 20;
+  text-decoration: none;
   &:before {
     content: "";
     position: absolute;
@@ -507,6 +508,9 @@
     background-size: contain;
     background-repeat: no-repeat;
     transform: rotate(28deg) scaleY(-1);
+  }
+  &:hover{
+    color: #d7891f;
   }
 }
 
@@ -2198,6 +2202,8 @@ input:focus {
   }  
   .page-content {
     padding-top: 848px;
+    background-color: linear-gradient(to bottom, #F2F2F2 0%, #F2F2F2 50%, #fff 50%, #fff 50%);
+
   }
   .button{
     margin-bottom: 0px;
@@ -2337,7 +2343,8 @@ input:focus {
     height: 307px;
     height: 307px;
     margin: 0px 11px;
-    border-radius: 25px;;
+    border-radius: 25px;
+    
   }
   .gallery-item:nth-child(2) {
     transform: translateY(-69px);
@@ -2427,12 +2434,19 @@ input:focus {
     bottom: -619px;
   }
   .gallery-item{
-    max-width: 170px;
+    max-width: 209px;
     margin: 0px 4px;
-    height: 290px;
+    height: 307px;
   }
 }
 
 .wpcf7-response-output {
   display: none !important;
+}
+
+.slideName{
+  opacity: 0;
+  color: transparent;
+  pointer-events: none;
+  height: 1px;
 }

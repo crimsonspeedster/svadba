@@ -20,13 +20,23 @@ $('.owl-carousel').owlCarousel({
     }
   })
   
+
+let SliderName =  document.querySelector(".owl-item.active  .slideName");
+let placeForName = document.querySelector(".small-gold");
+
+placeForName.innerHTML = SliderName.textContent;
+
   let owl = $(".owl-carousel");
       owl.owlCarousel();
       $(".next-btn").click(function () {
           owl.trigger("next.owl.carousel");
+          placeForName.innerHTML = SliderName.textContent;
+
       });
       $(".prev-btn").click(function () {
           owl.trigger("prev.owl.carousel");
+          placeForName.innerHTML = SliderName.textContent;
+
       });
       $(".prev-btn").addClass("disabled");
       $(owl).on("translated.owl.carousel", function (event) {

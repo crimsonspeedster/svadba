@@ -272,3 +272,5 @@ closeBtn.addEventListener('click', function () {
 document.addEventListener('wpcf7mailsent', function() {
     popup.classList.remove('hidden');
 }, false);
+
+
