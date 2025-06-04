@@ -5,19 +5,23 @@ function getLinkAttrs (array $link) : void {
         echo 'rel="nofollow noopener noindex" target="_blank"';
 }
 
-function getPostThumbnail (int|false|null $post_id) : void {
+/**
+ *
+ *
+ * @param int|false|null $post_id
+ */
+function getPostThumbnail($post_id): void {
     $title = pll__('Немає зображення');
 
-    if ($post_id) {
+    if (!empty($post_id)) {
         $title = get_the_title($post_id);
     }
 
-    if (get_the_post_thumbnail($post_id)) {
+    if (!empty($post_id) && get_the_post_thumbnail($post_id)) {
         echo get_the_post_thumbnail($post_id, 'full');
-    }
-    else {
+    } else {
         ?>
-        <img src="<?= get_template_directory_uri(); ?>/dist/front/images/no_image_placeholder.jpg" alt="<?= esc_attr($title); ?>">
+        <img src="<?= esc_url(get_template_directory_uri()); ?>/dist/front/images/no_image_placeholder.jpg" alt="<?= esc_attr($title); ?>">
         <?php
     }
 }

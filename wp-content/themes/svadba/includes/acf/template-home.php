@@ -330,22 +330,6 @@ if( function_exists('acf_add_local_field_group') ):
                 ),
             ],
             [
-                'key' => 'template-home_result-block_with_arrow',
-                'name' => 'result__block_with_arrow',
-                'label' => 'Title for block with arrow',
-                'type' => 'text',
-                'required' => 0,
-                'conditional_logic' => array(
-                    array(
-                        array(
-                            'field' => 'template-home_result-condition',
-                            'operator' => '==',
-                            'value' => '1',
-                        ),
-                    ),
-                ),
-            ],
-            [
                 'key' => 'template-home_result-images',
                 'label' => 'Images',
                 'name' => 'result__images',
@@ -370,6 +354,21 @@ if( function_exists('acf_add_local_field_group') ):
                         'label' => 'Image',
                         'type' => 'image',
                         'return_format' => 'id',
+                        'required' => 1,
+                    ],
+                    [
+                        'key' => 'template-home_result-images_link',
+                        'name' => 'link',
+                        'label' => 'Link',
+                        'type' => 'link',
+                        'return_format' => 'array',
+                        'required' => 0,
+                    ],
+                    [
+                        'key' => 'template-home_result-images_title',
+                        'name' => 'title',
+                        'label' => 'Title',
+                        'type' => 'text',
                         'required' => 1,
                     ],
                 ],

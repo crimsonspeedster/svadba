@@ -32,11 +32,18 @@ placeForName.innerHTML = SliderName.textContent;
           owl.trigger("next.owl.carousel");
           placeForName.innerHTML = SliderName.textContent;
 
+          if (SliderName.getAttribute('data-link')) {
+              placeForName.setAttribute('href', SliderName.getAttribute('data-link'));
+          }
+
       });
       $(".prev-btn").click(function () {
           owl.trigger("prev.owl.carousel");
           placeForName.innerHTML = SliderName.textContent;
 
+          if (SliderName.getAttribute('data-link')) {
+              placeForName.setAttribute('href', SliderName.getAttribute('data-link'));
+          }
       });
       $(".prev-btn").addClass("disabled");
       $(owl).on("translated.owl.carousel", function (event) {

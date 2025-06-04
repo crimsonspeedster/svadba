@@ -26,7 +26,6 @@ $trust__link = get_field('trust__link');
 
 $result__condition = get_field('result__condition');
 $result__title = get_field('result__title');
-$result__block_with_arrow = get_field('result__block_with_arrow');
 $result__images = get_field('result__images');
 
 $questions__condition = get_field('questions__condition');
@@ -184,9 +183,10 @@ $contact__form_id = get_field('contact__form_id');
                                     foreach ($result__images as $item) {
                                         ?>
                                         <div class="item">
-                                            <div class="owl-images ">
+                                            <div class="owl-images">
                                                 <?= wp_get_attachment_image($item['image_id'], 'full'); ?>
-                                                <p class="slideName">slide name</p>
+
+                                                <p class="slideName" <?= $item['link'] ? 'data-link="'.esc_url($item['link']).'"' : ''; ?>><?= $item['title']; ?></p>
                                             </div>
                                         </div>
                                         <?php
@@ -210,12 +210,8 @@ $contact__form_id = get_field('contact__form_id');
                                 </button>
                             </div>
                         </div>
-                        <?php
-                    }
 
-                    if ($result__block_with_arrow) {
-                        ?>
-                        <a href="#" class="small-gold"><?= $result__block_with_arrow; ?></a>
+                        <a class="small-gold"></a>
                         <?php
                     }
                 ?>
