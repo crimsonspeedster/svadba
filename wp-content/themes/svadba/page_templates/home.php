@@ -186,7 +186,7 @@ $contact__form_id = get_field('contact__form_id');
                                             <div class="owl-images">
                                                 <?= wp_get_attachment_image($item['image_id'], 'full'); ?>
 
-                                                <p class="slideName" <?= $item['link'] ? 'data-link="'.esc_url($item['link']).'"' : ''; ?>><?= $item['title']; ?></p>
+                                                <p class="slideName" <?= !empty($item['link']) ? 'data-link="'.esc_url($item['link']['url']).'"' : ''; ?>><?= $item['title']; ?></p>
                                             </div>
                                         </div>
                                         <?php
