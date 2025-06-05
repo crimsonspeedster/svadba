@@ -154,7 +154,7 @@ $contact__form_id = get_field('contact__form_id');
 
                         if (!empty($trust__link)) {
                             ?>
-                            <a href="<?= $trust__link['url']; ?>" class="button side-button scroll only-desctop" <?php getLinkAttrs($trust__link); ?>>
+                            <a href="<?= $trust__link['url']; ?>" class="button side-button scroll scroll-to-form only-desctop" <?php getLinkAttrs($trust__link); ?>>
                                 <span><?= $trust__link['title']; ?></span>
                             </a>
                             <?php
