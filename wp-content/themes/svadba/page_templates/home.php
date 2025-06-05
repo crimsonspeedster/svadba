@@ -196,16 +196,14 @@ $contact__form_id = get_field('contact__form_id');
 
                             <div class="btn-wrap">
                                 <button class="prev-btn">
-                                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M13 5.99071L1.14067 6M5.65867 1L1 6L5.65867 11" stroke="black"
-                                              stroke-linecap="round" stroke-linejoin="round" />
+                                    <svg width="33" height="26" viewBox="0 0 33 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M32 13.0223L1.36339 13M13.0349 25L0.999999 13L13.0349 1" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
                                     </svg>
                                 </button>
 
                                 <button class="next-btn">
-                                    <svg width="47" height="37" viewBox="0 0 47 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0.999999 18.4675L45.4725 18.5M28.53 0.999997L46 18.5L28.53 36" stroke="black"
-                                              stroke-linecap="round" stroke-linejoin="round" />
+                                    <svg width="69" height="54" viewBox="0 0 69 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.999997 26.9517L67.2146 27M41.9891 0.999996L68 27L41.9891 53" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
                                     </svg>
                                 </button>
                             </div>

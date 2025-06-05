@@ -108,14 +108,13 @@
   position: relative;
 }
 
-.page-content{
-  // background: linear-gradient(#f7f7f7 0%, #f7f7f7 100%, #fff 100%, #fff 100%);
-}
+
   .page-content {
-    background-color:    linear-gradient(to bottom, #F2F2F2 0%, #F2F2F2 50%, #fff 50%, #fff 100%);
-    background-image:  url('../images/backwawe2.webp');
+    background-color: linear-gradient(to bottom, #F7F7F7 0%, #F7F7F7 50%, #fff 50%, #fff 100%);
+    background-image:  url('../images/wawe123.png');
     background-repeat: no-repeat;
-    background-position: top, bottom;
+    // background-position: top, bottom;
+    background-position: bottom;
   }
 
 .top-screen{
@@ -228,7 +227,7 @@
 .bold-text {
   font-family: inherit;
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 900;
   letter-spacing: 3px;
   line-height: 149%;
   color: c.$main-color;
@@ -1992,16 +1991,11 @@ input:focus {
   }
   .page-content {
     padding-top: 780px;
-    background-color:    linear-gradient(to bottom, #F2F2F2 0%, #F2F2F2 50%, #fff 50%, #fff 100%);
-    background-image:  url('../images/backwawe2.webp');
-    background-repeat: no-repeat;
-
-    background-position: top, bottom;
-  }
-  .page-template-home main{
-      background-image:     linear-gradient(to bottom, #F2F2F2 0%, #F2F2F2 50%, #fff 50%, #fff 100%);
-  }
- 
+    // background-color:    linear-gradient(to bottom, #F7F7F7 0%, #F7F7F7 50%, #fff 50%, #fff 100%);
+    // background-image:  url('../images/backwawe2.webp');
+    // background-repeat: no-repeat;
+    // background-position: bottom;
+  } 
 }
 
 /* Для десктопів */
@@ -2215,8 +2209,6 @@ input:focus {
   }  
   .page-content {
     padding-top: 848px;
-    // background-color: linear-gradient(to bottom, #F2F2F2 0%, #F2F2F2 50%, #fff 50%, #fff 50%);
-    // background-color: linear-gradient(180deg,#f2f2f2 0,#f2f2f2 50%,#fff 0,#fff 0);
 
   }
   .button{
@@ -2235,10 +2227,7 @@ input:focus {
          gap: 33px; 
     }
 
-  .page-content {
-    background-position: bottom;
-    // background-color: linear-gradient(to bottom, #F2F2F2 0%, #F2F2F2 50%, #fff 50%, #fff 50%);
-  }
+
   .pics-block .wrap-top {
     width: 543px;
     height: 372px;
