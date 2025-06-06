@@ -1,15 +1,13 @@
 <?php
-if (empty($args))
-    return;
+$wave__condition = get_field('wave__condition', 'option');
+$wave__repeater = get_field('wave__repeater', 'option');
 
-$repeater = $args['repeater'];
-
-if (!empty($repeater)) {
+if ($wave__condition && !empty($wave__repeater)) {
     ?>
     <div class="wawe-gallery">
         <div class="gallery">
             <?php
-                foreach ($repeater as $index => $item) {
+                foreach ($wave__repeater as $index => $item) {
                     $delay = ($index + 1) * 100;
                     ?>
                     <div class="gallery-item">
