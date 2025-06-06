@@ -100,6 +100,56 @@ if( function_exists('acf_add_local_field_group') ) {
                 ],
             ],
             [
+                'key' => 'acf_theme_settings_tab-wave',
+                'label' => 'Wave',
+                'type' => 'tab',
+            ],
+            [
+                'key' => 'acf_theme_settings_wave-condition',
+                'label' => 'Enable block?',
+                'name' => 'wave__condition',
+                'type' => 'true_false',
+                'default_value' => 0,
+                'ui' => 1,
+            ],
+            [
+                'key' => 'acf_theme_settings_wave-repeater',
+                'label' => 'Repeater',
+                'name' => 'wave__repeater',
+                'type' => 'repeater',
+                'required' => 1,
+                'layout' => 'table',
+                'min' => 1,
+                'max' => 0,
+                'conditional_logic' => array(
+                    array(
+                        array(
+                            'field' => 'acf_theme_settings_wave-condition',
+                            'operator' => '==',
+                            'value' => '1',
+                        ),
+                    ),
+                ),
+                'sub_fields' => [
+                    [
+                        'key' => 'acf_theme_settings_wave-repeater_image',
+                        'name' => 'image_id',
+                        'label' => 'Image',
+                        'type' => 'image',
+                        'return_format' => 'id',
+                        'required' => 1,
+                    ],
+                    [
+                        'key' => 'acf_theme_settings_wave-repeater_link',
+                        'name' => 'link',
+                        'label' => 'Link',
+                        'type' => 'link',
+                        'return_format' => 'array',
+                        'required' => 1,
+                    ],
+                ],
+            ],
+            [
                 'key' => 'acf_theme_settings-tab-error',
                 'label' => '404',
                 'type' => 'tab',

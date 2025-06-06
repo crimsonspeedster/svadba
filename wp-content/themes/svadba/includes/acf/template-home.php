@@ -454,56 +454,6 @@ if( function_exists('acf_add_local_field_group') ):
                 ],
             ],
             [
-                'key' => 'template-home_tab-wave',
-                'label' => 'Wave',
-                'type' => 'tab',
-            ],
-            [
-                'key' => 'template-home_wave-condition',
-                'label' => 'Enable block?',
-                'name' => 'wave__condition',
-                'type' => 'true_false',
-                'default_value' => 0,
-                'ui' => 1,
-            ],
-            [
-                'key' => 'template-home_wave-repeater',
-                'label' => 'Repeater',
-                'name' => 'wave__repeater',
-                'type' => 'repeater',
-                'required' => 1,
-                'layout' => 'table',
-                'min' => 1,
-                'max' => 0,
-                'conditional_logic' => array(
-                    array(
-                        array(
-                            'field' => 'template-home_wave-condition',
-                            'operator' => '==',
-                            'value' => '1',
-                        ),
-                    ),
-                ),
-                'sub_fields' => [
-                    [
-                        'key' => 'template-home_wave-repeater_image',
-                        'name' => 'image_id',
-                        'label' => 'Image',
-                        'type' => 'image',
-                        'return_format' => 'id',
-                        'required' => 1,
-                    ],
-                    [
-                        'key' => 'template-home_wave-repeater_link',
-                        'name' => 'link',
-                        'label' => 'Link',
-                        'type' => 'link',
-                        'return_format' => 'array',
-                        'required' => 1,
-                    ],
-                ],
-            ],
-            [
                 'key' => 'template-home_tab-contact',
                 'label' => 'Contact',
                 'type' => 'tab',

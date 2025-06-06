@@ -110,26 +110,7 @@ if (function_exists('acf_register_block_type')) {
             )
         ),
     ));
-
-    acf_register_block_type(array(
-        'name'              => 'wave-gallery',
-        'title'             => 'Wave gallery',
-        'description'       => 'Wave gallery',
-        'render_template'   => $blocks_path . '/wave-gallery/render.php',
-        'category'          => 'svadba',
-        'icon'              => 'admin-comments',
-        'mode'              => 'edit',
-        'example' => array(
-            'attributes' => array(
-                'mode' => 'preview',
-                'data' => array(
-                    'is_preview' => true,
-                    'preview_image' => $blocks_path_uri . '/wave-gallery/image.png'
-                )
-            )
-        ),
-    ));
-
+    
     acf_register_block_type(array(
         'name'              => 'slider-section',
         'title'             => 'Slider section',

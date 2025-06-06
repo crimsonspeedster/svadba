@@ -33,9 +33,6 @@ $questions__title = get_field('questions__title');
 $questions__description = get_field('questions__description');
 $questions__repeater = get_field('questions__repeater');
 
-$wave__condition = get_field('wave__condition');
-$wave__repeater = get_field('wave__repeater');
-
 $contact__condition = get_field('contact__condition');
 $contact__title = get_field('contact__title');
 $contact__description = get_field('contact__description');
@@ -262,11 +259,7 @@ $contact__form_id = get_field('contact__form_id');
             <?php
         }
 
-        if ($wave__condition) {
-            get_template_part('partials/block-wave-gallery', '', [
-                'repeater' => $wave__repeater,
-            ]);
-        }
+        get_template_part('partials/block-wave-gallery');
 
         if ($contact__condition) {
             ?>
