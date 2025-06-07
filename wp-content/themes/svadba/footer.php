@@ -1,8 +1,12 @@
 <?php
-$common__footer_bg = get_field('common__footer_bg', 'option');
+$common__footer_bg = '';
 
 if (is_singular('post')) {
-    $common__footer_bg = get_field('common__footer_bg_single', 'option');
+    $common__footer_bg = get_field('header__bg_id');
+}
+
+if(!$common__footer_bg) {
+    $common__footer_bg = get_field('common__footer_bg', 'option');
 }
 ?>
 </main>

@@ -59,6 +59,7 @@
     "/dist/front/fonts/Montserrat-converted/Montserrat-Thin.woff2": "/dist/front/fonts/Montserrat-converted/Montserrat-Thin.woff2",
     "/dist/front/fonts/Montserrat-converted/demo.html": "/dist/front/fonts/Montserrat-converted/demo.html",
     "/dist/front/fonts/Montserrat-converted/stylesheet.css": "/dist/front/fonts/Montserrat-converted/stylesheet.css",
+    "/dist/front/images/6p.png": "/dist/front/images/6p.png",
     "/dist/front/images/MainN.png": "/dist/front/images/MainN.png",
     "/dist/front/images/Rectangle 299.jpg": "/dist/front/images/Rectangle 299.jpg",
     "/dist/front/images/b1.webp": "/dist/front/images/b1.webp",
@@ -238,6 +239,5 @@
     "/dist/front/js/main.js": "/dist/front/js/main.js",
     "/dist/front/js/owl.js": "/dist/front/js/owl.js",
     "/dist/front/js/sliders-pack.js": "/dist/front/js/sliders-pack.js",
-    "/dist/front/js/sticky-blog.js": "/dist/front/js/sticky-blog.js",
-    "/dist/front/images/6p.png": "/dist/front/images/6p.png"
+    "/dist/front/js/sticky-blog.js": "/dist/front/js/sticky-blog.js"
 }

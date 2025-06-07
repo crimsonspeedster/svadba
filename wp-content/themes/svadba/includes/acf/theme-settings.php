@@ -36,14 +36,6 @@ if( function_exists('acf_add_local_field_group') ) {
                 'required' => 1,
             ],
             [
-                'key' => 'acf_theme_settings_common-footer_bg--single',
-                'name' => 'common__footer_bg_single',
-                'label' => 'Footer bg (single post)',
-                'type' => 'image',
-                'return_format' => 'id',
-                'required' => 1,
-            ],
-            [
                 'key' => 'acf_theme_settings_common-header-social',
                 'label' => 'Header social',
                 'name' => 'common__header_social',
