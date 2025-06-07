@@ -174,9 +174,11 @@ else {
             <?php
         }
         else {
-            ?>
-            <h1 class="h1 sanimate fadeInUp  "><?= get_field('header__title', $page_id); ?></h1>
-            <?php
+            if (!is_singular('post')) {
+                ?>
+                <h1 class="h1 sanimate fadeInUp  "><?= get_field('header__title', $page_id); ?></h1>
+                <?php
+            }
         }
     ?>
 </div>
